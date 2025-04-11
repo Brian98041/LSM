@@ -36,33 +36,35 @@ class AplicacionLenguajeSeñas:
         )
         lbl_subtitulo.pack(pady=(0, 30))
         
-        # Botones de opciones
+        # Estilo base
         btn_estilo = {
             'font': ('Arial', 12),
             'width': 25,
             'height': 2,
             'bd': 0,
             'highlightthickness': 0,
-            'activebackground': '#3498db',
             'activeforeground': 'white'
         }
-        
-        
+
+        # Botón "Reconocer señas" - naranja
         btn_reconocer = tk.Button(
             main_frame,
             text="Reconocer señas en tiempo real",
-            bg='#2ecc71',
+            bg='#FF5F00',
             fg='white',
+            activebackground='#CC4A00',
             command=self.reconocer_senas,
             **btn_estilo
         )
         btn_reconocer.pack(pady=10)
         
+        # Botón "Salir" - rosado
         btn_salir = tk.Button(
             main_frame,
             text="Salir",
-            bg='#e74c3c',
+            bg='#FF577F',
             fg='white',
+            activebackground='#FF416C',
             command=self.salir_aplicacion,
             **btn_estilo
         )
